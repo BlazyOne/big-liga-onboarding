@@ -1,3 +1,7 @@
+// body {
+//   overflow-x: hidden;
+// }
+
 .wrapper {
   position: relative;
 
@@ -27,6 +31,20 @@
   main {
     flex-grow: 1;
   }
+}
+
+.body-modal {
+  position: fixed;
+
+  max-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+
+  -webkit-overflow-scrolling: none;
+  -ms-scroll-chaining: none;
+  overscroll-behavior: none;
+  -ms-touch-action: none;
+  touch-action: none;
 }
 
 .visually-hidden {
