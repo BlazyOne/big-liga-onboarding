@@ -642,6 +642,8 @@ button,
     .main-content__additional--out {
       -webkit-transform: translateX(-100%);
               transform: translateX(-100%); }
+    .main-content__additional--no-display {
+      display: none; }
   .main-content__additional-dinosaur-color {
     display: none; }
   .main-content__additional-dinosaur-white {
@@ -675,7 +677,9 @@ button,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  min-height: 768px; }
+  min-height: 768px;
+  height: 100vh;
+  height: calc(100 * var(--vh, 1vh)); }
 
 .main-loader__logo {
   width: 800px;
@@ -683,7 +687,7 @@ button,
   -webkit-animation: 1s ease loader-logo-appearance;
           animation: 1s ease loader-logo-appearance; }
 
-.main-loader__enter-message {
+.main-loader__message {
   position: absolute;
   left: 50%;
   bottom: 100px;
@@ -699,6 +703,8 @@ button,
           transform: translate(-50%, 0);
   -webkit-animation: 1s ease loader-message-appearance;
           animation: 1s ease loader-message-appearance; }
+  .main-loader__message--click {
+    display: none; }
 
 @-webkit-keyframes loader-logo-appearance {
   0% {
@@ -737,7 +743,11 @@ button,
     min-height: 1024px; }
   .main-loader__logo {
     width: 550px;
-    height: 70px; } }
+    height: 70px; }
+  .main-loader__message--enter {
+    display: none; }
+  .main-loader__message--click {
+    display: block; } }
 
 /* @media (hover: hover), screen and (min-width: 0\0) {
   &:hover,

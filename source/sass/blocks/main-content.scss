@@ -90,6 +90,10 @@
     &--out {
       transform: translateX(-100%);
     }
+
+    &--no-display {
+      display: none;
+    }
   }
 
   .main-content__additional-dinosaur-color {

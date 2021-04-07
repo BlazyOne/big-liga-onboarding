@@ -27,6 +27,14 @@ const initMainPage = () => {
       showContent();
     }
   });
+
+  window.addEventListener('resize', function () {
+    if (mainContentAdditional) {
+      mainContentAdditional.classList.add('main-content__additional--no-display');
+      void mainContentAdditional.offsetWidth;
+      mainContentAdditional.classList.remove('main-content__additional--no-display');
+    }
+  });
 };
 
 export {initMainPage};

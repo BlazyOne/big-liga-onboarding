@@ -22,6 +22,8 @@
   justify-content: center;
   align-items: center;
   min-height: 768px;
+  height: 100vh;
+  height: calc(100 * var(--vh, 1vh));
 }
 
 .main-loader__logo {
@@ -31,7 +33,7 @@
   animation: $default-transition-settings loader-logo-appearance;
 }
 
-.main-loader__enter-message {
+.main-loader__message {
   position: absolute;
   left: 50%;
   bottom: 100px;
@@ -48,6 +50,10 @@
 
   transform: translate(-50%, 0);
   animation: $default-transition-settings loader-message-appearance;
+
+  &--click {
+    display: none;
+  }
 }
 
 @keyframes loader-logo-appearance {
@@ -80,5 +86,15 @@
   .main-loader__logo {
     width: 550px;
     height: 70px;
+  }
+
+  .main-loader__message {
+    &--enter {
+      display: none;
+    }
+
+    &--click {
+      display: block;
+    }
   }
 }
